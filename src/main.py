@@ -1,15 +1,18 @@
+import os
 from flask import Flask
 
 import config
+import controllers
 
 
 def create_app():
     app = Flask(__name__)
     config.init_app(app)
+    controllers.init_app(app)
+
     return app
 
 
-# For running the project with gunicorn
 app = create_app()
 
 
