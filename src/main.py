@@ -1,8 +1,7 @@
 import os
 from flask import Flask
 
-import config
-import controllers
+from src import config, controllers
 
 
 def create_app():
@@ -14,8 +13,3 @@ def create_app():
 
 
 app = create_app()
-
-
-@app.route("/health")
-def health():
-    return "SERVER_IS_READ"

@@ -1,11 +1,10 @@
-from db import create_mongo_client
-from entities import School
+from src.db import create_mongo_connection
+from src.entities import School
 
 
 class SchoolRepository:
     def __init__(self):
-        self.db = create_mongo_client()
-        self.school_collection = self.db["schools"]
+        self.school_collection = create_mongo_connection("schools")
 
     def create(self, data):
         school_data = self._mapper(data)

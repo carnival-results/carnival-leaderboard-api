@@ -1,8 +1,8 @@
 from flask import request, jsonify
 from flask_restful import Resource
 
-from usecases.school_usecase import CreateSchool
-from repositories.school_repository import SchoolRepository
+from src.usecases.school_usecase import CreateSchool
+from src.repositories.school_repository import SchoolRepository
 
 
 repository = SchoolRepository()
