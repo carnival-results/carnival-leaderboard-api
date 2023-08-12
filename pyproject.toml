@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Paulo Herrera <pauloherreralopes@gmail.com>"]
 readme = "README.md"
-packages = [{include = "carnival_leaderboard_api"}]
+packages = [{include = "leaderboard_api"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -13,6 +13,7 @@ pymongo = "^4.4.1"
 dnspython = "^2.4.1"
 python-dotenv = "^1.0.0"
 flask-restful = "^0.3.10"
+flask-cors = "^4.0.0"
 
 
 [tool.poetry.group.dev.dependencies]

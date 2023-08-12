@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+from flask_cors import CORS
 
 
 class ApplicationConfig:
@@ -7,6 +8,10 @@ class ApplicationConfig:
 
 
 def init_app(app):
-    # Load environment variables from .env file
     load_dotenv()
     app.config.from_object(ApplicationConfig)
+    CORS(
+        app,
+        resources={r"/api/*": {"origins": os.getenv("MAIN_APP_URL")}},
+        supports_credentials=True,
+    )
